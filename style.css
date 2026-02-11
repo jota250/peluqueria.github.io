@@ -256,3 +256,23 @@ body {
   text-align: center;
   width: 100%;
 }
+
+.hero-maquillaje {
+  height: 75vh;
+}
+
+.hero-peinados {
+  height: 75vh;
+}
+
+.hero-trabajos {
+  height: 75vh;
+}
+
+.hero-tratamientos {
+  height: 75vh;
+}
+
+.hero-depilacion {
+  height: 75vh;
+}
