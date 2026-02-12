@@ -102,5 +102,48 @@
   💬
 </a>
 
+<!-- MÚSICA DE FONDO -->
+<audio id="bg-music" loop>
+  <source src="musica.mp3" type="audio/mpeg">
+  Tu navegador no soporta audio
+</audio>
+
+<!-- BOTÓN PARA ACTIVAR LA MÚSICA -->
+<button id="music-toggle" class="music-toggle">
+  🎵
+</button>
+
+<script>
+  const music = document.getElementById("bg-music");
+  const toggle = document.getElementById("music-toggle");
+
+  let reproduciendo = false;
+
+  toggle.addEventListener("touchstart", function () {
+    if (!reproduciendo) {
+      music.volume = 0.25;
+      music.play();
+      toggle.textContent = "🔊";
+      reproduciendo = true;
+    } else {
+      music.pause();
+      toggle.textContent = "🎵";
+      reproduciendo = false;
+    }
+  });
+
+  toggle.addEventListener("click", function () {
+    if (!reproduciendo) {
+      music.volume = 0.25;
+      music.play();
+      toggle.textContent = "🔊";
+      reproduciendo = true;
+    } else {
+      music.pause();
+      toggle.textContent = "🎵";
+      reproduciendo = false;
+    }
+  });
+</script>
 </body>
 </html>
