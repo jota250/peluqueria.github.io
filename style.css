@@ -594,3 +594,35 @@ animation-delay: 0s, 2.4s;
     z-index: 9999;         /* más alto que todo */
   }
 }
+
+/* ICONOS REDES SOCIALES MÁS VISIBLES */
+
+.social-home img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-home a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-home a:hover img {
+  transform: scale(1.15);
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .social-home img {
+    width: 52px;
+    height: 52px;
+  }
+
+  .social-home {
+    gap: 36px;
+    margin-top: 30px;
+  }
+}
