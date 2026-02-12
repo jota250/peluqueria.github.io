@@ -483,3 +483,81 @@ animation-delay: 0s, 2.4s;
     0 6px 20px rgba(0,0,0,0.35);
 }
 
+/* Redes sociales en la home */
+.social-home {
+  margin-top: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;   /* ← clave para alineación vertical */
+  gap: 28px;
+  position: relative;
+  z-index: 4;
+}
+
+.social-home a {
+  display: inline-flex;      /* ← mejor que inline-block */
+  align-items: center;       /* ← centra verticalmente el texto */
+  justify-content: center;
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #6b5c53;
+  opacity: 0.9;
+  text-decoration: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.social-home a:hover {
+  opacity: 1;
+  transform: translateY(-3px);
+}
+
+
+.social-home a {
+  font-size: 0.9rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #ffffff;
+  opacity: 0.85;
+  text-decoration: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.social-home a:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+/* Asegurar que ningún enlace dentro de social-home se oculta */
+.social-home a:first-child {
+  display: inline-flex;
+  visibility: visible;
+  opacity: 0.9;
+}
+
+/* Redes sociales debajo del botón de cita */
+.card .social-home {
+  margin-top: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+}
+
+.card .social-home a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #6b5c53;
+  text-decoration: none;
+  opacity: 0.9;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.card .social-home a:hover {
+  opacity: 1;
+  transform: translateY(-3px);
+}
