@@ -222,7 +222,7 @@ animation-delay: 0s, 2.4s;
 ========================= */
 .btn {
   display: inline-block;
-  margin-top: 45px;
+  margin-top: 0;
   padding: 16px 38px;
   background-color: #2f2a24;
   color: #fff;
@@ -648,4 +648,56 @@ animation-delay: 0s, 2.4s;
 /* Si las redes están dentro de la card (fondo blanco) */
 .card .social-title {
   color: #6b5c53;
+}
+
+/* ICONO WHATSAPP EN BOTÓN CITA */
+
+.btn-cita {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-cita .desktop-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.whatsapp-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+/* BOTÓN + ICONO WHATSAPP AL LADO */
+
+.cta-whatsapp {
+  display: inline-flex;   /* 👈 CLAVE */
+  align-items: center;    /* 👈 ALINEA EN ALTURA */
+  gap: 16px;
+  margin-top: 45px;
+}
+
+.cta-whatsapp-icon {
+  display: flex;
+  align-items: center;
+}
+
+.cta-whatsapp-icon img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .cta-whatsapp {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .cta-whatsapp-icon img {
+    width: 42px;
+    height: 42px;
+  }
 }
