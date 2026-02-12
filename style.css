@@ -626,3 +626,26 @@ animation-delay: 0s, 2.4s;
     margin-top: 30px;
   }
 }
+
+/* TÍTULO REDES SOCIALES HOME */
+
+.social-home-wrapper {
+  margin-top: 28px;
+  text-align: center;
+}
+
+.social-title {
+  display: block;
+  margin-bottom: 14px;
+
+  font-size: 0.75rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+
+  color: rgba(255,255,255,0.8);
+}
+
+/* Si las redes están dentro de la card (fondo blanco) */
+.card .social-title {
+  color: #6b5c53;
+}
