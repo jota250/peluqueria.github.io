@@ -919,24 +919,6 @@ animation-delay: 0s, 2.4s;
 
 }
 
-/* ===== FIX DEFINITIVO MAQUILLAJE Y PEINADOS EN MOVIL ===== */
-@media (max-width: 768px) {
-
-  .gallery-intro {
-    font-size: 1.15rem !important;
-    line-height: 1.8 !important;
-  }
-
-}
-
-/* ===== TEXTO MAQUILLAJE Y PEINADOS EN MÓVIL ===== */
-@media (max-width: 768px) {
-  .gallery-intro {
-    font-size: 1.3rem;
-    line-height: 1.85;
-  }
-}
-
 /* ===== HERO TEXTO MÁS GRANDE EN MÓVIL ===== */
 @media (max-width: 768px) {
 
@@ -947,3 +929,15 @@ animation-delay: 0s, 2.4s;
 
 }
 
+/* ===== TEXTO GALERÍAS (MAQUILLAJE Y PEINADOS) EN MÓVIL ===== */
+@media (max-width: 768px) {
+
+  .gallery-intro {
+    font-size: 1.25rem;
+    line-height: 1.9;
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
