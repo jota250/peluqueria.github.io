@@ -937,3 +937,13 @@ animation-delay: 0s, 2.4s;
   }
 }
 
+/* ===== HERO TEXTO MÁS GRANDE EN MÓVIL ===== */
+@media (max-width: 768px) {
+
+  .hero-text p {
+    font-size: 1.1rem;
+    letter-spacing: 0.15em;
+  }
+
+}
+
