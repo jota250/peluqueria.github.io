@@ -4,153 +4,161 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Peluquería Sonia</title>
+
+  <!-- ESTILOS PRINCIPALES -->
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
-<!-- HERO HOME -->
-<header class="hero hero-home">
+<body class="page">
 
-  <video autoplay muted loop playsinline class="hero-video">
-    <source src="hero.mp4" type="video/mp4">
-    Tu navegador no soporta vídeo HTML5
-  </video>
+  <!-- ================= HERO HOME ================= -->
+  <header class="hero hero-home">
 
-  <div class="hero-overlay"></div>
+    <video autoplay muted loop playsinline class="hero-video">
+      <source src="hero.mp4" type="video/mp4">
+      Tu navegador no soporta vídeo HTML5
+    </video>
 
-  <div class="hero-text">
-    <h1>Peluquería Sonia</h1>
-    <p>Estilo, cuidado y belleza para ti</p>
-  </div>
+    <div class="hero-overlay"></div>
 
-</header>
-
-<main>
-
-<section class="card">
-
-  <!-- SOBRE MI -->
-  <a href="sobre-mi.html" class="section-title">Sobre mí</a>
-
-  <p>
-    En <strong>Peluquería Sonia</strong> creemos que cada persona es única y merece un trato personalizado.
-  </p>
-
-  <p>
-    Cuidamos cada detalle para que disfrutes de una experiencia relajante, cercana y profesional,
-    donde el tiempo se detiene y tú eres la protagonista.
-  </p>
-
-  <p>
-    Somos especialistas en peluquería femenina, coloración y tratamientos capilares,
-    trabajando siempre con productos de calidad y técnicas actualizadas para realzar tu belleza natural.
-  </p>
-
-  <!-- TEXTO INTRODUCTORIO -->
-  <p>
-    Nuestros servicios están pensados para cuidar tu imagen y hacerte sentir bien desde el primer momento.
-  </p>
-
-  <!-- LISTA DE SERVICIOS -->
-  <ul class="services">
-    <li><a href="maquillaje.html">Maquillaje y estilismo femenino personalizado</a></li>
-    <li><a href="trabajos.html">Trabajos técnicos, coloración, mechas y balayage</a></li>
-    <li><a href="peinados.html">Peinados y recogidos para eventos y fiestas</a></li>
-    <li><a href="tratamientos.html">Tratamientos capilares y cuidado del cabello</a></li>
-    <li><a href="depilacion.html">Depilación</a></li>
-  </ul>
-
-  <!-- INTRO MIS TRABAJOS -->
-  <p class="intro-trabajos">
-    Aquí puedes ver algunos de mis trabajos para que te hagas una idea de mi estilo,
-    la dedicación y el cuidado que pongo en cada servicio.
-  </p>
-
-  <!-- BOTÓN MIS TRABAJOS -->
-  <a href="mis-trabajos.html" class="section-title">Mis trabajos</a>
-
-  <!-- CTA -->
-  <p class="cta-text">
-    Tu cabello habla de ti. Déjalo en buenas manos.
-  </p>
-
-  <div class="cta-whatsapp">
-    <a
-  href="https://wa.me/34616499044?text=Hola%20Sonia%2C%20quiero%20pedir%20una%20cita"
-  class="btn btn-cita"
-  target="_blank"
->
-  Pide tu cita
-</a>
-
-    <a
-      href="https://wa.me/34616499044?text=Hola%20Sonia%2C%20quiero%20pedir%20una%20cita"
-      class="cta-whatsapp-icon"
-      target="_blank"
-      aria-label="WhatsApp"
-    >
-      <img src="whatsapp.png" alt="WhatsApp">
-    </a>
-  </div>
-
-  <!-- REDES SOCIALES -->
-  <div class="social-home-wrapper">
-    <span class="social-title">Síguenos</span>
-
-    <div class="social-home">
-      <a href="https://www.instagram.com/peluqueriasoniaespartinas/" target="_blank">
-        <img src="instagram.png" alt="Instagram">
-      </a>
-      <a href="https://www.facebook.com/peluqueriaybellezasonia/" target="_blank">
-        <img src="facebook.png" alt="Facebook">
-      </a>
+    <div class="hero-text">
+      <h1>Peluquería Sonia</h1>
+      <p>Estilo, cuidado y belleza para ti</p>
     </div>
-  </div>
 
-</section>
+  </header>
 
-<section class="contact">
-  <a href="contacto.html" class="section-title">Contacto</a>
-  <p>
-    📍 Urb. Los Castaños 27, Espartinas, Sevilla<br>
-    📞 954 11 36 20<br>
-    ⏰ Lunes a viernes: 9:00 – 19:00
-  </p>
-</section>
+  <main>
 
-</main>
+    <!-- ================= TARJETA PRINCIPAL ================= -->
+    <section class="card">
 
-<a
-  href="https://wa.me/34616499044?text=Hola%20quiero%20pedir%20una%20cita"
-  class="whatsapp-float"
-  target="_blank"
->
-  💬
-</a>
+      <!-- SOBRE MI -->
+      <a href="sobre-mi.html" class="section-title">Sobre mí</a>
 
-<audio id="bg-music" loop>
-  <source src="musica.mp3" type="audio/mpeg">
-</audio>
+      <p>
+        En <strong>Peluquería Sonia</strong> creemos que cada persona es única y merece un trato personalizado.
+      </p>
 
-<button id="music-toggle" class="music-toggle">🎵</button>
+      <p>
+        Cuidamos cada detalle para que disfrutes de una experiencia relajante, cercana y profesional,
+        donde el tiempo se detiene y tú eres la protagonista.
+      </p>
 
-<script>
-const music = document.getElementById("bg-music");
-const toggle = document.getElementById("music-toggle");
-let playing = false;
+      <p>
+        Somos especialistas en peluquería femenina, coloración y tratamientos capilares,
+        trabajando siempre con productos de calidad y técnicas actualizadas para realzar tu belleza natural.
+      </p>
 
-toggle.addEventListener("click", () => {
-  if (!playing) {
-    music.volume = 0.25;
-    music.play();
-    toggle.textContent = "🔊";
-  } else {
-    music.pause();
-    toggle.textContent = "🎵";
-  }
-  playing = !playing;
-});
-</script>
+      <p>
+        Nuestros servicios están pensados para cuidar tu imagen y hacerte sentir bien desde el primer momento.
+      </p>
+
+      <!-- LISTA DE SERVICIOS -->
+      <ul class="services">
+        <li><a href="maquillaje.html">Maquillaje y estilismo femenino personalizado</a></li>
+        <li><a href="trabajos.html">Trabajos técnicos, coloración, mechas y balayage</a></li>
+        <li><a href="peinados.html">Peinados y recogidos para eventos y fiestas</a></li>
+        <li><a href="tratamientos.html">Tratamientos capilares y cuidado del cabello</a></li>
+        <li><a href="depilacion.html">Depilación</a></li>
+      </ul>
+
+      <!-- INTRO MIS TRABAJOS -->
+      <p class="intro-trabajos">
+        Aquí puedes ver algunos de mis trabajos para que te hagas una idea de mi estilo,
+        la dedicación y el cuidado que pongo en cada servicio.
+      </p>
+
+      <!-- BOTÓN MIS TRABAJOS -->
+      <a href="mis-trabajos.html" class="section-title">Mis trabajos</a>
+
+      <!-- CTA -->
+      <p class="cta-text">
+        Tu cabello habla de ti. Déjalo en buenas manos.
+      </p>
+
+      <!-- CTA WHATSAPP -->
+      <div class="cta-whatsapp">
+        <a
+          href="https://wa.me/34616499044?text=Hola%20Sonia%2C%20quiero%20pedir%20una%20cita"
+          class="btn btn-cita"
+          target="_blank"
+        >
+          Pide tu cita
+        </a>
+
+        <a
+          href="https://wa.me/34616499044?text=Hola%20Sonia%2C%20quiero%20pedir%20una%20cita"
+          class="cta-whatsapp-icon"
+          target="_blank"
+          aria-label="WhatsApp"
+        >
+          <img src="whatsapp.png" alt="WhatsApp">
+        </a>
+      </div>
+
+      <!-- REDES SOCIALES -->
+      <div class="social-home-wrapper">
+        <span class="social-title">Síguenos</span>
+
+        <div class="social-home">
+          <a href="https://www.instagram.com/peluqueriasoniaespartinas/" target="_blank">
+            <img src="instagram.png" alt="Instagram">
+          </a>
+          <a href="https://www.facebook.com/peluqueriaybellezasonia/" target="_blank">
+            <img src="facebook.png" alt="Facebook">
+          </a>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ================= CONTACTO ================= -->
+    <section class="contact">
+      <a href="contacto.html" class="section-title">Contacto</a>
+      <p>
+        📍 Urb. Los Castaños 27, Espartinas, Sevilla<br>
+        📞 954 11 36 20<br>
+        ⏰ Lunes a viernes: 9:00 – 19:00
+      </p>
+    </section>
+
+  </main>
+
+  <!-- ================= BOTONES FLOTANTES ================= -->
+
+  <a
+    href="https://wa.me/34616499044?text=Hola%20quiero%20pedir%20una%20cita"
+    class="whatsapp-float"
+    target="_blank"
+  >
+    💬
+  </a>
+
+  <audio id="bg-music" loop>
+    <source src="musica.mp3" type="audio/mpeg">
+  </audio>
+
+  <button id="music-toggle" class="music-toggle">🎵</button>
+
+  <!-- ================= SCRIPT MÚSICA ================= -->
+  <script>
+    const music = document.getElementById("bg-music");
+    const toggle = document.getElementById("music-toggle");
+    let playing = false;
+
+    toggle.addEventListener("click", () => {
+      if (!playing) {
+        music.volume = 0.25;
+        music.play();
+        toggle.textContent = "🔊";
+      } else {
+        music.pause();
+        toggle.textContent = "🎵";
+      }
+      playing = !playing;
+    });
+  </script>
 
 </body>
 </html>
