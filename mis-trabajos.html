@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis trabajos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero hero--small">
+
+  <!-- Imagen hero -->
+  <img src="img/servicios-fondo.jpg" alt="Trabajos de peluquería" class="hero-video">
+
+  <div class="hero-text">
+    <h1>Mis trabajos</h1>
+    <p>Una selección de trabajos reales realizados con dedicación y detalle</p>
+    <a href="index.html" class="btn-volver">Volver al inicio</a>
+  </div>
+
+</header>
+
+<main>
+
+<section class="gallery-section">
+
+  <p class="gallery-intro">
+    Aquí puedes ver algunos de mis trabajos para que puedas hacerte una idea
+    del estilo, la técnica y el resultado final.
+  </p>
+
+  <div class="gallery-grid">
+
+    <!-- 30 IMÁGENES -->
+    <img src="img/trabajos/trabajo-01.jpg" alt="">
+    <img src="img/trabajos/trabajo-02.jpg" alt="">
+    <img src="img/trabajos/trabajo-03.jpg" alt="">
+    <img src="img/trabajos/trabajo-04.jpg" alt="">
+    <img src="img/trabajos/trabajo-05.jpg" alt="">
+    <img src="img/trabajos/trabajo-06.jpg" alt="">
+    <img src="img/trabajos/trabajo-07.jpg" alt="">
+    <img src="img/trabajos/trabajo-08.jpg" alt="">
+    <img src="img/trabajos/trabajo-09.jpg" alt="">
+    <img src="img/trabajos/trabajo-10.jpg" alt="">
+    <img src="img/trabajos/trabajo-11.jpg" alt="">
+    <img src="img/trabajos/trabajo-12.jpg" alt="">
+    <img src="img/trabajos/trabajo-13.jpg" alt="">
+    <img src="img/trabajos/trabajo-14.jpg" alt="">
+    <img src="img/trabajos/trabajo-15.jpg" alt="">
+    <img src="img/trabajos/trabajo-16.jpg" alt="">
+    <img src="img/trabajos/trabajo-17.jpg" alt="">
+    <img src="img/trabajos/trabajo-18.jpg" alt="">
+    <img src="img/trabajos/trabajo-19.jpg" alt="">
+    <img src="img/trabajos/trabajo-20.jpg" alt="">
+    <img src="img/trabajos/trabajo-21.jpg" alt="">
+    <img src="img/trabajos/trabajo-22.jpg" alt="">
+    <img src="img/trabajos/trabajo-23.jpg" alt="">
+    <img src="img/trabajos/trabajo-24.jpg" alt="">
+    <img src="img/trabajos/trabajo-25.jpg" alt="">
+    <img src="img/trabajos/trabajo-26.jpg" alt="">
+    <img src="img/trabajos/trabajo-27.jpg" alt="">
+    <img src="img/trabajos/trabajo-28.jpg" alt="">
+    <img src="img/trabajos/trabajo-29.jpg" alt="">
+    <img src="img/trabajos/trabajo-30.jpg" alt="">
+
+  </div>
+
+</section>
+
+</main>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <span class="lightbox-close">&times;</span>
+  <span class="lightbox-prev">&#10094;</span>
+  <img class="lightbox-img" src="" alt="">
+  <span class="lightbox-next">&#10095;</span>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const images = document.querySelectorAll(".gallery-grid img");
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.querySelector(".lightbox-img");
+  const closeBtn = document.querySelector(".lightbox-close");
+  const prevBtn = document.querySelector(".lightbox-prev");
+  const nextBtn = document.querySelector(".lightbox-next");
+
+  let currentIndex = 0;
+
+  function showImage(index) {
+    lightboxImg.src = images[index].src;
+    currentIndex = index;
+  }
+
+  images.forEach((img, index) => {
+    img.addEventListener("click", () => {
+      showImage(index);
+      lightbox.classList.add("show");
+    });
+  });
+
+  closeBtn.addEventListener("click", () => {
+    lightbox.classList.remove("show");
+  });
+
+  prevBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage(currentIndex);
+  });
+
+  nextBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage(currentIndex);
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (!lightbox.classList.contains("show")) return;
+
+    if (e.key === "Escape") lightbox.classList.remove("show");
+    if (e.key === "ArrowLeft") prevBtn.click();
+    if (e.key === "ArrowRight") nextBtn.click();
+  });
+
+});
+</script>
+
+</body>
+</html>

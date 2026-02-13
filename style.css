@@ -212,6 +212,22 @@ animation-delay: 0s, 2.4s;
   transition: transform .25s, box-shadow .25s;
 }
 
+/* TEXTO BOTONES SERVICIOS COMO RESTO BOTONES */
+
+.services li a {
+  display: block;
+  text-decoration: none;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 600;              /* mismo peso que botones */
+  letter-spacing: 0.05em;
+  color: #2f2a24;                /* mismo color que section-title */
+  transition: color 0.25s ease;
+}
+
+.services li a:hover {
+  color: #000;
+}
+
 .services li:hover {
   transform: translateY(-4px);
   box-shadow: 0 14px 32px rgba(0,0,0,0.22);
@@ -362,86 +378,6 @@ animation-delay: 0s, 2.4s;
   }
 }
 
-/* =========================
-   HERO IMAGEN SERVICIOS
-========================= */
-.hero-img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
-
-  filter: brightness(0.55) saturate(1.05);
-  animation: cinematicMove 18s ease-in-out infinite;
-  transform-origin: center;
-}
-
-@keyframes cinematicMove {
-  0% {
-    transform: scale(1.03) translateY(0);
-  }
-  50% {
-    transform: scale(1.09) translateY(-22px);
-  }
-  100% {
-    transform: scale(1.03) translateY(0);
-  }
-}
-
-.hero-servicios {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-.hero-servicios .hero-img {
-  filter: brightness(1.1) saturate(1.1);
-}
-
-.hero-servicios::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0,0,0,0.25) 0%,
-    rgba(0,0,0,0.55) 60%,
-    rgba(0,0,0,0.8) 100%
-  );
-  z-index: 2;
-}
-
-.hero-servicios .hero-text {
-  position: relative;
-  z-index: 3;
-  text-align: center;
-  width: 100%;
-}
-
-
-.hero-maquillaje {
-  height: 75vh;
-}
-
-.hero-peinados {
-  height: 75vh;
-}
-
-.hero-trabajos {
-  height: 75vh;
-}
-
-.hero-tratamientos {
-  height: 75vh;
-}
-
-.hero-depilacion {
-  height: 75vh;
-}
-
 /* BOTÓN INTELIGENTE CITA */
 
 .mobile-text {
@@ -456,18 +392,6 @@ animation-delay: 0s, 2.4s;
   .mobile-text {
     display: inline;
   }
-}
-
-/* HOME — título con luz y profundidad */
-.hero .hero-text h1 {
-  color: #fdfdfd;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-
-  text-shadow:
-    -1px -1px 2px rgba(255,255,255,0.35),
-    0 6px 18px rgba(0,0,0,0.7),
-    0 28px 60px rgba(0,0,0,0.9);
 }
 
 /* HOME — título principal elegante y protagonista */
@@ -701,3 +625,287 @@ animation-delay: 0s, 2.4s;
     height: 36px;
   }
 }
+
+/* CONTACTO WEB – TEXTO IZQUIERDA / MAPA DERECHA */
+
+.contact-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 25px;
+}
+
+.contact-info {
+  flex: 1;
+}
+
+.mapa-contacto {
+  flex: 1;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.mapa-contacto iframe {
+  width: 100%;
+  height: 260px;
+  border: 0;
+}
+
+.contact-wrapper {
+  
+}
+
+/* CONTACTO – TARJETA CON MAPA A LA DERECHA */
+
+.contact-wrapper {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.contact-info {
+  flex: 1;
+}
+
+.mapa-contacto {
+  flex: 1;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.mapa-contacto iframe {
+  width: 100%;
+  height: 260px;
+  border: 0;
+}
+
+/* ===== GALERIA MIS TRABAJOS ===== */
+
+.gallery-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.gallery-intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 50px;
+  font-size: 1.05rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 18px;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.18);
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.25);
+}
+
+/* ===== LIGHTBOX ===== */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 9999;
+}
+
+.lightbox.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox-img {
+  max-width: 90%;
+  max-height: 85%;
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* BOTÓN VOLVER */
+
+.btn-volver {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 28px;
+  background: #fff;
+  color: #000;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-volver:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* FLECHAS LIGHTBOX */
+
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 50px;
+  color: white;
+  cursor: pointer;
+  padding: 20px;
+  user-select: none;
+  transition: 0.3s;
+}
+
+.lightbox-prev {
+  left: 20px;
+}
+
+.lightbox-next {
+  right: 20px;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  opacity: 0.7;
+}
+/* =====================================================
+   RESET DEFINITIVO HERO (ANTI-CONFLICTOS)
+   ===================================================== */
+
+.hero {
+  position: relative !important;
+  height: 85vh !important;
+  min-height: 520px !important;
+  background: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  overflow: hidden !important;
+}
+
+.hero-video,
+.hero img {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  z-index: 1 !important;
+}
+
+.hero::before {
+  content: none !important;
+}
+
+.hero-text {
+  position: relative !important;
+  z-index: 2 !important;
+  background: none !important;
+  max-width: 900px !important;
+  padding: 30px !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+  color: #fff !important;
+}
+
+.hero-text * {
+  background: none !important;
+}
+
+/* ===== BOTÓN "VOLVER AL INICIO" EN HERO ===== */
+
+.hero .btn-volver {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 28px;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.hero .btn-volver:hover {
+  background-color: #222;
+  transform: translateY(-2px);
+}
+
+/* ===== FIX DEFINITIVO BOTÓN HERO ===== */
+
+.hero .btn-volver {
+  display: inline-block !important;
+  margin-top: 25px !important;
+  padding: 12px 28px !important;
+  background: #000 !important;
+  color: #fff !important;
+  text-decoration: none !important;
+  border-radius: 30px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  border: none !important;
+  position: relative !important;
+  z-index: 5 !important;
+}
+
+.hero .btn-volver:hover {
+  background: #222 !important;
+  transform: translateY(-2px);
+}
+
+/* ===== FIX TÍTULO HERO HOME ===== */
+
+.hero-home h1 {
+  white-space: nowrap !important;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.6) !important;
+  font-size: clamp(32px, 5vw, 56px);
+}
+
+/* ===== SOMBREADO POTENTE HERO HOME ===== */
+
+.hero-home h1 {
+  white-space: nowrap !important;
+  font-size: clamp(32px, 5vw, 56px);
+  color: #fff !important;
+  text-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.6),
+    0 6px 18px rgba(0, 0, 0, 0.8),
+    0 18px 40px rgba(0, 0, 0, 0.9) !important;
+}
+
