@@ -895,3 +895,24 @@ animation-delay: 0s, 2.4s;
     0 18px 40px rgba(0, 0, 0, 0.9) !important;
 }
 
+/* ===== MEJORAR LEGIBILIDAD EN MÓVIL ===== */
+
+@media (max-width: 768px) {
+
+  body {
+    font-size: 18px;   /* antes estaba en 16px aprox */
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .card {
+    font-size: 1rem;
+  }
+
+  .contact {
+    font-size: 1rem;
+  }
+
+}
