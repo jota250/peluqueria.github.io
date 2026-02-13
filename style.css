@@ -892,40 +892,30 @@ animation-delay: 0s, 2.4s;
     0 18px 40px rgba(0, 0, 0, 0.9) !important;
 }
 
-/* ===== AUMENTAR LEGIBILIDAD EN MÓVIL (GLOBAL REAL) ===== */
+/* ===== TEXTO MÓVIL DEFINITIVO Y UNIFICADO ===== */
 
-@media (max-width: 768px) {
-
-  p,
-  li,
-  .contact,
-  .card,
-  .gallery-intro {
-    font-size: 1.1rem !important;
-    line-height: 1.8 !important;
-  }
-
-}
-
-/* ===== AJUSTE DEFINITIVO TEXTO EN MOVIL ===== */
 @media (max-width: 768px) {
 
   body {
-    font-size: 18px;
-    line-height: 1.7;
+    font-size: 19px;
+    line-height: 1.8;
   }
 
+  .card,
+  .gallery-intro,
+  .contact,
   p,
   li {
     font-size: 1rem;
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   h2 {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
   }
+
 }
 
