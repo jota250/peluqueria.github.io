@@ -984,3 +984,27 @@ animation-delay: 0s, 2.4s;
   }
 
 }
+
+/* ===== AJUSTE HERO TEXTO EN MÓVIL (TODAS LAS PÁGINAS INTERNAS) ===== */
+@media (max-width: 768px) {
+
+  body.maquillaje .hero-text h1,
+  body.peinados .hero-text h1,
+  body.tratamientos .hero-text h1,
+  body.depilacion .hero-text h1,
+  body.trabajos .hero-text h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  body.maquillaje .hero-text p,
+  body.peinados .hero-text p,
+  body.tratamientos .hero-text p,
+  body.depilacion .hero-text p,
+  body.trabajos .hero-text p {
+    font-size: 1rem;
+    letter-spacing: 0.12em;
+    line-height: 1.5;
+  }
+
+}
