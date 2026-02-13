@@ -952,3 +952,18 @@ animation-delay: 0s, 2.4s;
   }
 
 }
+
+/* ===== AJUSTE HERO MAQUILLAJE EN MÓVIL ===== */
+@media (max-width: 768px) {
+
+  body.maquillaje .hero-text h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  body.maquillaje .hero-text p {
+    font-size: 1rem;
+    letter-spacing: 0.12em;
+  }
+
+}
