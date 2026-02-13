@@ -494,8 +494,8 @@ animation-delay: 0s, 2.4s;
 
 @media (max-width: 768px) {
   .music-toggle {
-    bottom: 28px;   /* ✅ misma altura que WhatsApp */
-    left: 28px;     /* ✅ simetría visual */
+    bottom: 28px !important;
+    left: 28px !important;
     width: 60px;
     height: 60px;
     font-size: 24px;
