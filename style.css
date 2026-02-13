@@ -941,3 +941,14 @@ animation-delay: 0s, 2.4s;
   }
 
 }
+
+/* ===== AJUSTE TEXTO HERO PEINADOS EN MÓVIL ===== */
+@media (max-width: 768px) {
+
+  body.peinados .hero-text p {
+    font-size: 1.2rem;
+    letter-spacing: 0.15em;
+    line-height: 1.6;
+  }
+
+}
