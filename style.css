@@ -18,8 +18,7 @@ body {
 ========================= */
 .hero {
   position: relative;
-  height: 85vh;
-  overflow: hidden;
+  min-height: 85vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -144,7 +143,7 @@ body {
   background: linear-gradient(180deg, #ffffff, #fbf9f7);
   border: 1px solid rgba(0,0,0,0.04);
   max-width: 880px;
-  margin: -90px auto 70px;
+  margin: 40px auto 70px;
   padding: 55px;
   border-radius: 26px;
   box-shadow:
@@ -189,7 +188,7 @@ animation-delay: 0s, 2.4s;
     transform: translateY(-60px) scale(1.06);
   }
   to {
-    transform: translateY(-40px) scale(1);
+    transform: translateY(0) scale(1);
   }
 }
 
@@ -789,15 +788,13 @@ animation-delay: 0s, 2.4s;
    ===================================================== */
 
 .hero {
-  position: relative !important;
-  height: 85vh !important;
-  min-height: 520px !important;
-  background: none !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  text-align: center !important;
-  overflow: hidden !important;
+  position: relative;
+  min-height: 85vh;
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .hero-video,
@@ -909,3 +906,4 @@ animation-delay: 0s, 2.4s;
   }
 
 }
+
