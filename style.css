@@ -380,20 +380,6 @@ animation-delay: 0s, 2.4s;
 
 /* BOTÓN INTELIGENTE CITA */
 
-.mobile-text {
-  display: none;
-}
-
-@media (max-width: 768px) {
-  .desktop-text {
-    display: none;
-  }
-
-  .mobile-text {
-    display: inline;
-  }
-}
-
 /* HOME — título principal elegante y protagonista */
 .hero > .hero-text > h1 {
   font-weight: 300;
