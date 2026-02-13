@@ -602,9 +602,11 @@ animation-delay: 0s, 2.4s;
 
 @media (max-width: 768px) {
   .cta-whatsapp {
-    flex-direction: column;
+    flex-direction: row;      /* ✅ uno al lado del otro */
+    justify-content: center;  /* ✅ centrados */
     gap: 12px;
   }
+}
 
   .cta-whatsapp-icon img {
     width: 36px;
