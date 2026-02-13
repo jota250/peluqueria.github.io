@@ -919,3 +919,13 @@ animation-delay: 0s, 2.4s;
 
 }
 
+/* ===== FIX DEFINITIVO MAQUILLAJE Y PEINADOS EN MOVIL ===== */
+@media (max-width: 768px) {
+
+  .gallery-intro {
+    font-size: 1.15rem !important;
+    line-height: 1.8 !important;
+  }
+
+}
+
